@@ -39,7 +39,7 @@ O projeto "Frew Games" foi desenvolvido a partir da linguagem de programação J
 
 ## Liçenca
 
-Licença da - `afl-3.0` (`Academic Free License v3.0`)
+Licença da `afl-3.0` (`Academic Free License v3.0`)
 
 ## Autores
 
