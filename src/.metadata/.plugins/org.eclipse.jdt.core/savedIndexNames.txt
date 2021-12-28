@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+G:\Outros computadores\Computador da Família\Documents\portfolio\frewGames\frewGames\src\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3066547552.index

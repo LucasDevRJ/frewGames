@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+file:/G:/Outros%20computadores/Computador%20da%20Família/Documents/portfolio/frewGames/frewGames/src/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
+meta_index
