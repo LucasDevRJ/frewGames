@@ -114,13 +114,15 @@ public class FrewGames {
 		}
 	}
 	
-	public void comprarUnidadesConsoles(Console console, int unidadesDesejadas) {
+	public void comprarUnidadesConsoles(Console console, int unidadesDesejadas, Financeiro financeiro) {
 		float descontoCompraAtacado = console.getPreco() - (console.getPreco() * 0.40f);
 		float precoUnidades = descontoCompraAtacado * unidadesDesejadas;
-		if (this.receita >= precoUnidades) {
+		if (financeiro.getReceita() >= precoUnidades) {
 			this.unidadesDisponiveisConsoles = console.getUnidades();
 			this.unidadesDisponiveisConsoles += unidadesDesejadas;
-			this.receita -= precoUnidades;
+			this.custo = financeiro.getCusto();
+			this.custo += precoUnidades;
+			financeiro.setCusto(this.custo);
 			console.setUnidades(this.unidadesDisponiveisConsoles);
 			System.out.println("Unidades Compradas com Sucesso!");
 			System.out.println("Informações sobre o console");

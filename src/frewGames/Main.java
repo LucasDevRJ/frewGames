@@ -74,6 +74,15 @@ public class Main {
 		jogo3.setGenero("Luta");
 		jogo3.setUnidades(6);
 		
+		Jogo jogo4 = new Jogo();
+		jogo4.setNome("Bully");
+		jogo4.setPreco(70.0f);
+		jogo4.setDataLancamento("03/05/2006");
+		jogo4.setFaixaEtaria(18);
+		jogo4.setDescricao("Jogo de mundo aberto com violência.");
+		jogo4.setGenero("Aventura em mundo aberto");
+		jogo4.setUnidades(9);
+		
 		//Criando o objeto InformacoesVendedor e setando atributos
 		InformacoesPessoais informacoesVendedor = new InformacoesPessoais();
 		informacoesVendedor.setNome("Júlio");
@@ -224,6 +233,8 @@ public class Main {
 		
 		//Criando objeto Financeiro
 		Financeiro financeiro = new Financeiro();
+		financeiro.setDespesa(300.0f);
+		financeiro.setGasto(200.0f);
 		
 		//Chamada de métodos da classe Loja
 		loja.cartaoLoja(enderecoLoja);
@@ -234,13 +245,16 @@ public class Main {
 		System.out.println();
 		loja.venderJogo(informacoesVendedor2, vendedor2, jogo, informacoesCliente2, caixa, financeiro, 200);
 		System.out.println();
-		loja.comprarUnidadesJogos(jogo3, 2, financeiro);
+		loja.venderJogo(informacoesVendedor, vendedor, jogo, informacoesCliente2, caixa2, financeiro, 130);
+		System.out.println();
+		loja.venderJogo(informacoesVendedor2, vendedor2, jogo4, informacoesCliente3, caixa2, financeiro, 70);
+		loja.comprarUnidadesJogos(jogo4, 2, financeiro);
 		System.out.println();
 		loja.comprarUnidadesJogos(jogo2, 4, financeiro);
 		System.out.println();
 		loja.venderJogo(informacoesVendedor, vendedor2, jogo2, informacoesCliente3, caixa, financeiro, 200);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor2, vendedor, jogo3, informacoesCliente4, caixa, financeiro, 130);
+		loja.venderJogo(informacoesVendedor2, vendedor, jogo4, informacoesCliente4, caixa, financeiro, 70);
 		System.out.println();
 		loja.venderConsole(informacoesVendedor, vendedor, playstation, informacoesCliente, caixa, financeiro, 2300);
 		System.out.println();
@@ -254,15 +268,19 @@ public class Main {
 		System.out.println();
 		loja.venderConsole(informacoesVendedor2, vendedor2, nintendo, informacoesCliente4, caixa, financeiro, 1200);
 		System.out.println();
-		loja.comprarUnidadesConsoles(xbox, 2);
+		loja.venderConsole(informacoesVendedor2, vendedor2, playstation, informacoesCliente2, caixa2, financeiro, 2300);
+		System.out.println();
+		loja.comprarUnidadesConsoles(xbox, 2, financeiro);
 		System.out.println();
 		
 		//Chamada dos métodos do Financeiro
 		financeiro.pagamentoSalarialVendedor(vendedor, informacoesVendedor, playstation, jogo);
 		System.out.println();
-		financeiro.pagamentoSalarialVendedor(vendedor2, informacoesVendedor2, playstation, jogo);
+		financeiro.pagamentoSalarialVendedor(vendedor2, informacoesVendedor2, xbox, jogo);
 		System.out.println();
-		financeiro.pagamentoSalarialCaixa(caixa);
+		financeiro.pagamentoSalarialCaixa(caixa, informacoesCaixa);
+		System.out.println();
+		financeiro.verificaLucro();
 		System.out.println();
 		
 		//Chamada de métodos da Classe PlayStation
@@ -297,5 +315,6 @@ public class Main {
 		gerente.acessarInformacoesColaborador(informacoesVendedor, contatoVendedor, enderecoVendedor, vendedor);
 		System.out.println();
 		gerente.acessarInformacoesColaborador(informacoesCaixa, contatoCaixa, enderecoCaixa, caixa);
+		System.out.println();
 	}
 }

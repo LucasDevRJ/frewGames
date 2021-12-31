@@ -38,6 +38,6 @@ public class Gerente extends Colaborador implements SistemaLoja{
 		System.out.println("Total de Despesas R$ " + financeiro.getDespesa());
 		System.out.println("Total de Custos R$ " + financeiro.getCusto());
 		System.out.println("Total de Gastos R$ " + financeiro.getGasto());
-		System.out.println("Total de Custo R$ " + financeiro.getCusto());
+		System.out.println("Lucro Total: R$ " + financeiro.getLucro());
 	}
 }

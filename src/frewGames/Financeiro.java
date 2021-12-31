@@ -25,12 +25,15 @@ public class Financeiro {
 		}
 	}
 	
-	public void pagamentoSalarialCaixa(Caixa caixa) {
+	public void pagamentoSalarialCaixa(Caixa caixa, InformacoesPessoais informacoesCaixa) {
 		if (this.receita >= caixa.getSalario()) {
 			if (this.receita >= 10000.0f) {
 				float bonusSalarial = (caixa.getSalario() * 0.20f) + caixa.getSalario();
 				caixa.setSalario(bonusSalarial);
-				System.out.println("O salario total da caixa é de R$ " + caixa.getSalario());
+				System.out.println("Nome: " + informacoesCaixa.getNome());
+				System.out.println("Sobrenome: " + informacoesCaixa.getSobrenome());
+				System.out.println("Cargo: " + caixa.getCargo());
+				System.out.println("Salario: R$ " + caixa.getSalario());
 			} else {
 				System.out.println("O salario total da caixa é de R$ " + caixa.getSalario());
 			}
@@ -41,7 +44,7 @@ public class Financeiro {
 	
 	public void verificaLucro() {
 		float totalDespesa = this.getDespesa() + this.getCusto() + this.getGasto();
-		float lucroLiquido = totalDespesa - this.getReceita();
+		float lucroLiquido = this.getReceita() - totalDespesa;
 		this.setLucro(lucroLiquido);
 		System.out.println("Informações Fincanceiras");
 		System.out.println("Total de Receita: R$ " + this.getReceita());
