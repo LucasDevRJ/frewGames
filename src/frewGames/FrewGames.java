@@ -8,9 +8,9 @@ public class FrewGames {
 	Colaborador colaborador;
 	Jogo jogo;
 	private String cnpj;
+	//Atributos auxiliares
 	private float receita;
 	private float custo;
-	//Atributos auxiliares
 	private float valorCaixa;
 	private int numeroVendas;
 	private int unidadesDisponiveisJogos;
@@ -21,7 +21,7 @@ public class FrewGames {
 		System.out.println(endereco.getComplemento() + " - " + endereco.getReferencia());
 	}
 	
-	public void venderJogo(InformacoesPessoais informacosVendedor, Vendedor vendedor, Jogo jogo, InformacoesPessoais cliente, Caixa caixa, float valorPago) {
+	public void venderJogo(InformacoesPessoais informacosVendedor, Vendedor vendedor, Jogo jogo, InformacoesPessoais cliente, Caixa caixa, Financeiro financeiro, float valorPago) {
 		if (caixa.getValorCaixa() <= valorPago || valorPago >= jogo.getPreco()) {
 			float troco = valorPago - jogo.getPreco();
 			System.out.println("Jogo Vendido!"); 
@@ -34,7 +34,9 @@ public class FrewGames {
 			System.out.println("Valor pago: " + valorPago);
 			System.out.println("Troco: " + troco);
 			float precoJogoVendido = jogo.getPreco();
+			this.receita = financeiro.getReceita();
 			this.receita += precoJogoVendido;
+			financeiro.setReceita(this.receita);
 			this.valorCaixa =  (jogo.getPreco() * 0.30f) + this.valorCaixa;
 			caixa.setValorCaixa(this.valorCaixa);
 			this.numeroVendas = vendedor.getNumeroVendas();
@@ -52,7 +54,7 @@ public class FrewGames {
 		}
 	}
 	
-	public void venderConsole(InformacoesPessoais informacoesVendedor, Vendedor vendedor, Console console, InformacoesPessoais cliente, Caixa caixa, float valorPago) {
+	public void venderConsole(InformacoesPessoais informacoesVendedor, Vendedor vendedor, Console console, InformacoesPessoais cliente, Caixa caixa, Financeiro financeiro, float valorPago) {
 		if (caixa.getValorCaixa() <= valorPago || valorPago >= console.getPreco()) {
 			float troco = valorPago - console.getPreco();
 			System.out.println("Console Vendido!");
@@ -65,7 +67,9 @@ public class FrewGames {
 			System.out.println("Valor pago: " + valorPago);
 			System.out.println("Troco: " + troco);
 			float precoConsoleVendido = console.getPreco();
+			this.receita = financeiro.getReceita();
 			this.receita += precoConsoleVendido;
+			financeiro.setReceita(this.receita);
 			this.valorCaixa =  (console.getPreco() * 0.30f) + this.valorCaixa;
 			caixa.setValorCaixa(this.valorCaixa);
 			this.unidadesDisponiveisJogos = console.getUnidades();
@@ -83,44 +87,15 @@ public class FrewGames {
 		}
 	}
 	
-	public void pagamentoSalarialVendedor(Vendedor vendedor, InformacoesPessoais vendedorInformacoes, Console console, Jogo jogo) {
-		if (this.receita >= vendedor.getSalario()) {
-			float comissao = (jogo.getPreco() * vendedor.getPercentualComissao()) + (console.getPreco() * vendedor.getPercentualComissao());
-			float salarioTotal = vendedor.getSalario() + (comissao * vendedor.getNumeroVendas());
-			vendedor.setSalario(salarioTotal);
-			System.out.println("Folha Salarial");
-			System.out.println("Nome: " + vendedorInformacoes.getNome());
-			System.out.println("Sobrenome: " + vendedorInformacoes.getSobrenome());
-			System.out.println("Cargo: " + vendedor.getCargo());
-			System.out.println("Número de Vendas: " + vendedor.getNumeroVendas());
-			System.out.println("Salario Mensal Bruto: R$ "+ vendedor.getSalario());
-			this.custo += salarioTotal;
-		} else {
-			System.out.println("Saldo insuficiente");
-		}
-	}
-	
-	public void pagamentoSalarial(Caixa caixa) {
-		if (this.receita >= caixa.getSalario()) {
-			if (this.receita >= 10000.0f) {
-				float bonusSalarial = (caixa.getSalario() * 0.10f) + caixa.getSalario();
-				caixa.setSalario(bonusSalarial);
-				System.out.println("O salario total da caixa é de R$ " + caixa.getSalario());
-			} else {
-				System.out.println("O salario total da caixa é de R$ " + caixa.getSalario());
-			}
-		} else {
-			System.out.println("Saldo insuficiente!");
-		}
-	}
-	
-	public void comprarUnidadesJogos(Jogo jogo, int unidadesDesejadas) {
+	public void comprarUnidadesJogos(Jogo jogo, int unidadesDesejadas, Financeiro financeiro) {
 		float descontoCompraAtacado = jogo.getPreco() - (jogo.getPreco() * 0.40f);
 		float precoUnidades = descontoCompraAtacado * unidadesDesejadas;
-		if (this.receita >= precoUnidades) {
+		if (financeiro.getReceita() >= precoUnidades) {
 			this.unidadesDisponiveisJogos = jogo.getUnidades();
 			this.unidadesDisponiveisJogos += unidadesDesejadas;
-			this.receita -= precoUnidades;
+			this.custo = financeiro.getCusto();
+			this.custo += precoUnidades;
+			financeiro.setCusto(this.custo);
 			jogo.setUnidades(this.unidadesDisponiveisJogos);
 			System.out.println("Unidades Compradas com Sucesso!");
 			System.out.println("Informações sobre o jogo");
@@ -133,8 +108,9 @@ public class FrewGames {
 			System.out.println("Unidades Compradas: " + unidadesDesejadas);
 			System.out.println("Valor total: " + precoUnidades);
 			System.out.println("Unidades Disponiveis: " + jogo.getUnidades());
+			System.out.println("Total de custo R$ " + financeiro.getCusto());
 		} else {
-			System.out.println("Receita total insuficiente!");
+			System.out.println("Não há receita suficiente para comprar os jogos!");
 		}
 	}
 	

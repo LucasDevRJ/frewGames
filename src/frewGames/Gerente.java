@@ -32,9 +32,12 @@ public class Gerente extends Colaborador implements SistemaLoja{
 	}
 
 	@Override
-	public void verificaFinanceiro(FrewGames informacoesLoja) {
+	public void verificaFinanceiro(Financeiro financeiro) {
 		System.out.println("Informações Financeiras da Loja");
-		System.out.println("Total de Receita R$ " + informacoesLoja.getReceita());
-		System.out.println("Total de Custo R$ " + informacoesLoja.getCusto());
+		System.out.println("Total de Receita R$ " + financeiro.getReceita());
+		System.out.println("Total de Despesas R$ " + financeiro.getDespesa());
+		System.out.println("Total de Custos R$ " + financeiro.getCusto());
+		System.out.println("Total de Gastos R$ " + financeiro.getGasto());
+		System.out.println("Total de Custo R$ " + financeiro.getCusto());
 	}
 }
