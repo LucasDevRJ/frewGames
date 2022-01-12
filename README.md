@@ -5,7 +5,7 @@
 ## Sobre
 O projeto "Frew Games" foi desenvolvido a partir da linguagem de programação Java e ele consiste em ser um sistema de loja de vídeo games. O projeto não possui uso de bibliotecas do Java, e sim uso de conceitos bases, como Classes; Classes abstratas; Polimorfismo; Herança; Interface e Orientação à Objetos. 
 
-![Badge - Status](https://img.shields.io/badge/Status-Desenvolvimento-brightgreen)
+![Badge - Status](https://img.shields.io/badge/Status-Finalizado-brightgreen)
 
 ![Badge - Autoral](https://img.shields.io/badge/Autoral-Sim-brightgreen)
 
@@ -36,6 +36,17 @@ O projeto "Frew Games" foi desenvolvido a partir da linguagem de programação J
 ## Tecnologias Usadas
 - `Java`
 - `Eclipse`
+  
+## Aprendizados
+  * `Lógica de Programação`
+  * `Orientação à Objetos`
+  * `Classes`
+  * `Herança`
+  * `Interface`
+  * `Relacionamento entre Classes`
+  
+## Dificuldades
+  * `Interação entre as classes`
 
 ## Liçenca
 
