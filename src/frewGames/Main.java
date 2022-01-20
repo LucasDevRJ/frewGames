@@ -13,6 +13,7 @@ public class Main {
 		informacoesCliente.setNacionalidade("brasileiro");
 		informacoesCliente.setRg("111.333.22");
 		
+		//Criando o objeto Endereco e setando atributos
 		Endereco enderecoCliente = new Endereco();
 		enderecoCliente.setPais("Brasil");
 		enderecoCliente.setCidade("Rio de Janeiro");
@@ -24,6 +25,7 @@ public class Main {
 		enderecoCliente.setReferencia("Próximo ao mercado Guanabara");
 		enderecoCliente.setCep(23223222);
 		
+		//Criando o objeto MeioContato e setando atributos
 		MeioContato contatoCliente = new MeioContato();
 		contatoCliente.setEmail("carlosvieira@outlook.com");
 		contatoCliente.setCelular(33333333);
@@ -38,18 +40,101 @@ public class Main {
 		cliente.setInformacoesPessoais(informacoesCliente);
 		cliente.setContato(contatoCliente);
 		
-		//Criando objetos sobre informações dos objetos Clientes
 		InformacoesPessoais informacoesCliente2 = new InformacoesPessoais();
-		informacoesCliente2.setNome("João");
-		informacoesCliente2.setCpf("333.322.222-11");
+		informacoesCliente2.setNome("Lúcio");
+		informacoesCliente2.setSobrenome("Lima");
+		informacoesCliente2.setCpf("333.222.333-22");
+		informacoesCliente2.setDataNascimento("16/06/2001");
+		informacoesCliente2.setNacionalidade("brasileiro");
+		informacoesCliente2.setRg("333.222-33");
+		
+		Endereco enderecoCliente2 = new Endereco();
+		enderecoCliente2.setPais("Brasil");
+		enderecoCliente2.setCidade("Rio de Janeiro");
+		enderecoCliente2.setEstado("Rio de Janeiro");
+		enderecoCliente2.setBairro("Guerrengue");
+		enderecoCliente2.setEndereco("Rua Aristoncio");
+		enderecoCliente2.setNumero(530);
+		enderecoCliente2.setComplemento("Casa número 2");
+		enderecoCliente2.setReferencia("Vila de casa");
+		enderecoCliente2.setCep(22222222);
+		
+		MeioContato contatoCliente2 = new MeioContato();
+		contatoCliente2.setEmail("luciolima@live.com");
+		contatoCliente2.setCelular(44433334);
+		contatoCliente2.setTelefone(222222222);
+		contatoCliente2.setFacebook("www.facebook/luciolima.com.br");
+		contatoCliente2.setInstagram("www.instagram/luciolima.com.br");
+		contatoCliente2.setWhatsapp(44433334);
+		
+		Cliente cliente2 = new Cliente();
+		cliente2.setEndereco(enderecoCliente2);
+		cliente2.setInformacoesPessoais(informacoesCliente2);
+		cliente2.setContato(contatoCliente2);
 		
 		InformacoesPessoais informacoesCliente3 = new InformacoesPessoais();
-		informacoesCliente3.setNome("Fábio");
-		informacoesCliente3.setCpf("112.232.222-00");
+		informacoesCliente3.setNome("Rafael");
+		informacoesCliente3.setSobrenome("Rodolfo");
+		informacoesCliente3.setCpf("333.111.333-00");
+		informacoesCliente3.setDataNascimento("23/02/1997");
+		informacoesCliente3.setNacionalidade("brasileiro");
+		informacoesCliente3.setRg("111.222-33");
+		
+		Endereco enderecoCliente3 = new Endereco();
+		enderecoCliente3.setPais("Brasil");
+		enderecoCliente3.setCidade("Rio de Janeiro");
+		enderecoCliente3.setEstado("Rio de Janeiro");
+		enderecoCliente3.setBairro("Tijuca");
+		enderecoCliente3.setEndereco("Rua Aristencola");
+		enderecoCliente3.setNumero(530);
+		enderecoCliente3.setComplemento("apartamento 302");
+		enderecoCliente3.setReferencia("Condominio luxoso");
+		enderecoCliente3.setCep(33322222);
+		
+		MeioContato contatoCliente3 = new MeioContato();
+		contatoCliente3.setEmail("rafaelrodolfo@gmail.com");
+		contatoCliente3.setCelular(11112222);
+		contatoCliente3.setTelefone(111112222);
+		contatoCliente3.setFacebook("www.facebook/rafaelrodolfo.com.br");
+		contatoCliente3.setInstagram("www.instagram/rafaelrodolfo.com.br");
+		contatoCliente3.setWhatsapp(11112222);
+		
+		Cliente cliente3 = new Cliente();
+		cliente3.setEndereco(enderecoCliente3);
+		cliente3.setInformacoesPessoais(informacoesCliente3);
+		cliente3.setContato(contatoCliente3);
 		
 		InformacoesPessoais informacoesCliente4 = new InformacoesPessoais();
-		informacoesCliente4.setNome("Osvaldo");
-		informacoesCliente4.setCpf("223.343.222-22");
+		informacoesCliente4.setNome("Gabriel");
+		informacoesCliente4.setSobrenome("Pereira");
+		informacoesCliente4.setCpf("222.444.666-11");
+		informacoesCliente4.setDataNascimento("10/09/2006");
+		informacoesCliente4.setNacionalidade("brasileiro");
+		informacoesCliente4.setRg("222.111-33");
+		
+		Endereco enderecoCliente4 = new Endereco();
+		enderecoCliente4.setPais("Brasil");
+		enderecoCliente4.setCidade("Rio de Janeiro");
+		enderecoCliente4.setEstado("Rio de Janeiro");
+		enderecoCliente4.setBairro("Cacatal");
+		enderecoCliente4.setEndereco("Rua Enelsom");
+		enderecoCliente4.setNumero(9800);
+		enderecoCliente4.setComplemento("apartamento 310");
+		enderecoCliente4.setReferencia("Condominio fafará");
+		enderecoCliente4.setCep(44441111);
+		
+		MeioContato contatoCliente4 = new MeioContato();
+		contatoCliente4.setEmail("gabrielpereira@gmail.com");
+		contatoCliente4.setCelular(44443222);
+		contatoCliente4.setTelefone(444555453);
+		contatoCliente4.setFacebook("www.facebook/gabrielpereira.com.br");
+		contatoCliente4.setInstagram("www.instagram/gabrielpereira.com.br");
+		contatoCliente4.setWhatsapp(44443222);
+		
+		Cliente cliente4 = new Cliente();
+		cliente4.setEndereco(enderecoCliente4);
+		cliente4.setInformacoesPessoais(informacoesCliente4);
+		cliente4.setContato(contatoCliente4);
 		
 		//Criando o objeto Jogo e setando atributos
 		Jogo jogo = new Jogo();

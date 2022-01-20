@@ -13,6 +13,7 @@ public abstract class Console {
 	private boolean estaLigado;
 	private boolean temJogo;
 	private String jogoAtual;
+	//variáveis auxiliares
 	private float saldoIdAtual;
 	private boolean possuiId;
 	
