@@ -2,11 +2,11 @@ package frewGames;
 
 public abstract class Colaborador {
 
-	InformacoesPessoais informacoesPessoais;
-	MeioContato contato;
+	private InformacoesPessoais informacoesPessoais;
+	private MeioContato contato;
 	private float salario;
 	private String cargo;
-	Endereco endereco;
+	private Endereco endereco;
 	private boolean mereceAumentoSalarial;
 	 
 	public MeioContato getContato() {
@@ -47,5 +47,13 @@ public abstract class Colaborador {
 
 	public void setMereceAumentoSalarial(boolean mereceAumentoSalarial) {
 		this.mereceAumentoSalarial = mereceAumentoSalarial;
+	}
+
+	public InformacoesPessoais getInformacoesPessoais() {
+		return informacoesPessoais;
+	}
+
+	public void setInformacoesPessoais(InformacoesPessoais informacoesPessoais) {
+		this.informacoesPessoais = informacoesPessoais;
 	}
 }

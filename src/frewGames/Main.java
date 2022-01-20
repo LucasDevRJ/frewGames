@@ -4,23 +4,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//criando objeto Endereco e setando os atributos
-		Endereco enderecoLoja = new Endereco();
-		enderecoLoja.setPais("Brasil");
-		enderecoLoja.setCidade("Rio de Janeiro");
-		enderecoLoja.setEstado("Rio de Janeiro");
-		enderecoLoja.setBairro("Freguesia");
-		enderecoLoja.setCep(23434545);
-		enderecoLoja.setComplemento("Sala 403, bloco 3");
-		enderecoLoja.setReferencia("Próximo ao shopping");
-		enderecoLoja.setNumero(3004);
-		enderecoLoja.setEndereco("Rua Alcantra");
-		
-		//Criando objeto LojaVideoGame e setando valor
-		FrewGames loja = new FrewGames();
-		loja.setNome("Frew Games");
-		loja.setCnpj("11.111.111/1111-11");
-		
 		//Criando o objeto InformacoesPessoais e setando atributos
 		InformacoesPessoais informacoesCliente = new InformacoesPessoais();
 		informacoesCliente.setNome("Carlos");
@@ -30,8 +13,30 @@ public class Main {
 		informacoesCliente.setNacionalidade("brasileiro");
 		informacoesCliente.setRg("111.333.22");
 		
+		Endereco enderecoCliente = new Endereco();
+		enderecoCliente.setPais("Brasil");
+		enderecoCliente.setCidade("Rio de Janeiro");
+		enderecoCliente.setEstado("Rio de Janeiro");
+		enderecoCliente.setBairro("Taquara");
+		enderecoCliente.setEndereco("Rua dos Munhecas");
+		enderecoCliente.setNumero(1210);
+		enderecoCliente.setComplemento("Casa número 15");
+		enderecoCliente.setReferencia("Próximo ao mercado Guanabara");
+		enderecoCliente.setCep(23223222);
+		
+		MeioContato contatoCliente = new MeioContato();
+		contatoCliente.setEmail("carlosvieira@outlook.com");
+		contatoCliente.setCelular(33333333);
+		contatoCliente.setTelefone(444444444);
+		contatoCliente.setFacebook("www.facebook/carlosvieira.com.br");
+		contatoCliente.setInstagram("www.instagram/vieiracarlos.com.br");
+		contatoCliente.setWhatsapp(33333333);
+		
 		//Criando objeto Cliente
 		Cliente cliente = new Cliente();
+		cliente.setEndereco(enderecoCliente);
+		cliente.setInformacoesPessoais(informacoesCliente);
+		cliente.setContato(contatoCliente);
 		
 		//Criando objetos sobre informações dos objetos Clientes
 		InformacoesPessoais informacoesCliente2 = new InformacoesPessoais();
@@ -115,6 +120,9 @@ public class Main {
 		
 		//Criando o objeto Vendedor e setando atributos
 		Vendedor vendedor = new Vendedor();
+		vendedor.setContato(contatoVendedor);
+		vendedor.setEndereco(enderecoVendedor);
+		vendedor.setInformacoesPessoais(informacoesVendedor);
 		vendedor.setSalario(1800.0f);
 		vendedor.setPercentualComissao(0.05f);
 		vendedor.setCargo("vendedor");
@@ -236,10 +244,29 @@ public class Main {
 		financeiro.setDespesa(300.0f);
 		financeiro.setGasto(200.0f);
 		
+		//criando objeto Endereco e setando os atributos
+		Endereco enderecoLoja = new Endereco();
+		enderecoLoja.setPais("Brasil");
+		enderecoLoja.setCidade("Rio de Janeiro");
+		enderecoLoja.setEstado("Rio de Janeiro");
+		enderecoLoja.setBairro("Freguesia");
+		enderecoLoja.setCep(23434545);
+		enderecoLoja.setComplemento("Sala 403, bloco 3");
+		enderecoLoja.setReferencia("Próximo ao shopping");
+		enderecoLoja.setNumero(3004);
+		enderecoLoja.setEndereco("Rua Alcantra");
+				
+		//Criando objeto LojaVideoGame e setando valor
+		FrewGames loja = new FrewGames();
+		loja.setNome("Frew Games");
+		loja.setCnpj("11.111.111/1111-11");
+		loja.setEndereco(enderecoLoja);
+		loja.setColaborador(vendedor);
+		
 		//Chamada de métodos da classe Loja
 		loja.cartaoLoja(enderecoLoja);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor, vendedor, xbox, informacoesCliente4, caixa, financeiro, 1600.0f);
+		loja.venderConsole(informacoesVendedor, vendedor, xbox, informacoesCliente4, caixa, financeiro, 1700.0f);
 		System.out.println();
 		loja.venderJogo(informacoesVendedor, vendedor, jogo, informacoesCliente, caixa, financeiro, 150);
 		System.out.println();

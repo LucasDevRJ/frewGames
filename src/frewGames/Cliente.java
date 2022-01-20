@@ -2,9 +2,9 @@ package frewGames;
 
 public class Cliente {
 
-	InformacoesPessoais informacoesPessoais;
-	Endereco endereco;
-	MeioContato contato;
+	private InformacoesPessoais informacoesPessoais;
+	private Endereco endereco;
+	private MeioContato contato;
 	private String id;
 	private float saldoId;
 	private String senhaId;
@@ -31,5 +31,29 @@ public class Cliente {
 
 	public void setSenhaId(String senhaId) {
 		this.senhaId = senhaId;
+	}
+
+	public InformacoesPessoais getInformacoesPessoais() {
+		return informacoesPessoais;
+	}
+
+	public void setInformacoesPessoais(InformacoesPessoais informacoesPessoais) {
+		this.informacoesPessoais = informacoesPessoais;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public MeioContato getContato() {
+		return contato;
+	}
+
+	public void setContato(MeioContato contato) {
+		this.contato = contato;
 	}
 }

@@ -4,9 +4,9 @@ public class FrewGames {
 
 	//Atributos da classe
 	private String nome;
-	Endereco endereco;
-	Colaborador colaborador;
-	Jogo jogo;
+	private Endereco endereco;
+	private Colaborador colaborador;
+	private Jogo jogo;
 	private String cnpj;
 	//Atributos auxiliares
 	private float receita;
@@ -204,5 +204,37 @@ public class FrewGames {
 
 	public void setUnidadesDisponiveisConsoles(int unidadesDisponiveisConsoles) {
 		this.unidadesDisponiveisConsoles = unidadesDisponiveisConsoles;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public Colaborador getColaborador() {
+		return colaborador;
+	}
+
+	public void setColaborador(Colaborador colaborador) {
+		this.colaborador = colaborador;
+	}
+
+	public Jogo getJogo() {
+		return jogo;
+	}
+
+	public void setJogo(Jogo jogo) {
+		this.jogo = jogo;
+	}
+
+	public int getUnidadesDisponiveisJogos() {
+		return unidadesDisponiveisJogos;
+	}
+
+	public void setUnidadesDisponiveisJogos(int unidadesDisponiveisJogos) {
+		this.unidadesDisponiveisJogos = unidadesDisponiveisJogos;
 	}
 }
