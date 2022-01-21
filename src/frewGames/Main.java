@@ -220,10 +220,32 @@ public class Main {
 		informacoesVendedor2.setRg("222.111-33");
 		informacoesVendedor2.setNacionalidade("brasileiro");
 		
+		MeioContato contatoVendedor2 = new MeioContato();
+		contatoVendedor2.setEmail("rodolfosilveira@gmail.com");
+		contatoVendedor2.setCelular(33332222);
+		contatoVendedor2.setTelefone(111113333);
+		contatoVendedor2.setFacebook("www.facebook/rodolfosilveira.com.br");
+		contatoVendedor2.setInstagram("www.instagram/rodolfosilveira.com.br");
+		contatoVendedor2.setWhatsapp(33332222);
+		
+		Endereco enderecoVendedor2 = new Endereco();
+		enderecoVendedor2.setPais("Brasil");
+		enderecoVendedor2.setCidade("Rio de Janeiro");
+		enderecoVendedor2.setEstado("Rio de Janeiro");
+		enderecoVendedor2.setBairro("Orfanco");
+		enderecoVendedor2.setEndereco("Rua dos layout");
+		enderecoVendedor2.setNumero(1230);
+		enderecoVendedor2.setComplemento("Casa número 15");
+		enderecoVendedor2.setReferencia("Uma vila de casa");
+		enderecoVendedor2.setCep(22321222);
+		
 		Vendedor vendedor2 = new Vendedor();
-		vendedor2.setSalario(1800.0f);
-		vendedor2.setPercentualComissao(0.05f);
-		vendedor2.setCargo("vendedor");
+		vendedor.setContato(contatoVendedor2);
+		vendedor.setEndereco(enderecoVendedor2);
+		vendedor.setInformacoesPessoais(informacoesVendedor2);
+		vendedor.setSalario(1800.0f);
+		vendedor.setPercentualComissao(0.05f);
+		vendedor.setCargo("vendedor");
 		
 		//Criando o objeto PlayStation e setando atributos
 		PlayStation playstation = new PlayStation();
@@ -271,8 +293,17 @@ public class Main {
 		informacoesGerente.setRg("122.323-32");
 		informacoesGerente.setDataNascimento("11/02/1996");
 		
+		MeioContato contatoGerente = new MeioContato();
+		contatoGerente.setEmail("luciosilva@gmail.com");
+		contatoGerente.setCelular(44444222);
+		contatoGerente.setTelefone(444443222);
+		contatoGerente.setFacebook("www.facebook/luciosilva.com.br");
+		contatoGerente.setInstagram("www.instagram/luciosilva.com.br");
+		contatoGerente.setWhatsapp(44444222);
+		
 		//Criando o objeto Gerente e setando atributos
 		Gerente gerente = new Gerente();
+		gerente.setInformacoesPessoais(informacoesGerente);
 		gerente.setCargo("gerente");
 		gerente.setSalario(3000.0f);
 		
