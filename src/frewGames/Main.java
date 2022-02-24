@@ -240,12 +240,12 @@ public class Main {
 		enderecoVendedor2.setCep(22321222);
 		
 		Vendedor vendedor2 = new Vendedor();
-		vendedor.setContato(contatoVendedor2);
-		vendedor.setEndereco(enderecoVendedor2);
-		vendedor.setInformacoesPessoais(informacoesVendedor2);
-		vendedor.setSalario(1800.0f);
-		vendedor.setPercentualComissao(0.05f);
-		vendedor.setCargo("vendedor");
+		vendedor2.setContato(contatoVendedor2);
+		vendedor2.setEndereco(enderecoVendedor2);
+		vendedor2.setInformacoesPessoais(informacoesVendedor2);
+		vendedor2.setSalario(1800.0f);
+		vendedor2.setPercentualComissao(0.05f);
+		vendedor2.setCargo("vendedor");
 		
 		//Criando o objeto PlayStation e setando atributos
 		PlayStation playstation = new PlayStation();
@@ -380,24 +380,24 @@ public class Main {
 		loja.setColaborador(vendedor);
 		
 		//Chamada de métodos da classe Loja
-		loja.cartaoLoja(enderecoLoja);
+		loja.cartaoLoja();
 		System.out.println();
 		loja.venderConsole(informacoesVendedor, vendedor, xbox, informacoesCliente4, caixa, financeiro, 1700.0f);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor, vendedor, jogo, informacoesCliente, caixa, financeiro, 150);
+		loja.venderJogo(vendedor, jogo, cliente, caixa, financeiro, 150);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor2, vendedor2, jogo, informacoesCliente2, caixa, financeiro, 200);
+		loja.venderJogo(vendedor2, jogo, cliente2, caixa, financeiro, 200);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor, vendedor, jogo, informacoesCliente2, caixa2, financeiro, 130);
+		loja.venderJogo(vendedor, jogo, cliente3, caixa2, financeiro, 130);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor2, vendedor2, jogo4, informacoesCliente3, caixa2, financeiro, 70);
+		loja.venderJogo(vendedor2, jogo4, cliente4, caixa2, financeiro, 70);
 		loja.comprarUnidadesJogos(jogo4, 2, financeiro);
 		System.out.println();
 		loja.comprarUnidadesJogos(jogo2, 4, financeiro);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor, vendedor2, jogo2, informacoesCliente3, caixa, financeiro, 200);
+		loja.venderJogo(vendedor2, jogo2, cliente, caixa, financeiro, 200);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor2, vendedor, jogo4, informacoesCliente4, caixa, financeiro, 70);
+		loja.venderJogo(vendedor, jogo4, cliente2, caixa, financeiro, 70);
 		System.out.println();
 		loja.venderConsole(informacoesVendedor, vendedor, playstation, informacoesCliente, caixa, financeiro, 2300);
 		System.out.println();
@@ -405,7 +405,7 @@ public class Main {
 		System.out.println();
 		loja.venderConsole(informacoesVendedor2, vendedor2, playstation, informacoesCliente4, caixa, financeiro, 2300);
 		System.out.println();
-		loja.venderJogo(informacoesVendedor, vendedor, jogo, informacoesCliente2, caixa, financeiro, 200);
+		loja.venderJogo(vendedor, jogo, cliente3, caixa, financeiro, 200);
 		System.out.println();
 		loja.venderConsole(informacoesVendedor2, vendedor2, xbox, informacoesCliente4, caixa, financeiro, 1700);
 		System.out.println();

@@ -16,19 +16,19 @@ public class FrewGames {
 	private int unidadesDisponiveisJogos;
 	private int unidadesDisponiveisConsoles;
 	
-	public void cartaoLoja(Endereco endereco) {
-		System.out.println("Venha comprar seus jogos na " + getNome() + "! localizado no " + endereco.getCidade() + " - " + endereco.getEndereco() + " - " + endereco.getNumero());
+	public void cartaoLoja() {
+		System.out.println("Venha comprar seus jogos na " + getNome() + "!\nlocalizado no " + endereco.getCidade() + " - " + endereco.getEndereco() + " - " + endereco.getNumero());
 		System.out.println(endereco.getComplemento() + " - " + endereco.getReferencia());
 	}
 	
-	public void venderJogo(InformacoesPessoais informacosVendedor, Vendedor vendedor, Jogo jogo, InformacoesPessoais cliente, Caixa caixa, Financeiro financeiro, float valorPago) {
+	public void venderJogo(Vendedor vendedor, Jogo jogo, Cliente cliente, Caixa caixa, Financeiro financeiro, float valorPago) {
 		if (caixa.getValorCaixa() <= valorPago || valorPago >= jogo.getPreco()) {
 			float troco = valorPago - jogo.getPreco();
 			System.out.println("Jogo Vendido!"); 
 			System.out.println("Via da compra:");
 			System.out.println("CNPJ: " + getCnpj());
-			System.out.println("Comprador: " + cliente.getNome() + " - " + cliente.getCpf());
-			System.out.println("Vendedor: " + informacosVendedor.getNome() + " - " + informacosVendedor.getCpf());
+			System.out.println("Comprador: " + cliente.getInformacoesPessoais().getNome() + " - " + cliente.getInformacoesPessoais().getCpf());
+			System.out.println("Vendedor: " + vendedor.getInformacoesPessoais().getNome() + " - " + vendedor.getInformacoesPessoais().getCpf());
 			System.out.println("Jogo: " + jogo.getNome());
 			System.out.println("Preço da compra: " + jogo.getPreco());
 			System.out.println("Valor pago: " + valorPago);
