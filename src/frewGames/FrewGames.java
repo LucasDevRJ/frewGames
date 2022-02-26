@@ -54,14 +54,14 @@ public class FrewGames {
 		}
 	}
 	
-	public void venderConsole(InformacoesPessoais informacoesVendedor, Vendedor vendedor, Console console, InformacoesPessoais cliente, Caixa caixa, Financeiro financeiro, float valorPago) {
+	public void venderConsole(Vendedor vendedor, Cliente cliente, Console console, Caixa caixa, Financeiro financeiro, float valorPago) {
 		if (caixa.getValorCaixa() <= valorPago || valorPago >= console.getPreco()) {
 			float troco = valorPago - console.getPreco();
 			System.out.println("Console Vendido!");
 			System.out.println("Via da compra:");
 			System.out.println("CNPJ: " + getCnpj());
-			System.out.println("Comprador: " + cliente.getNome() + " - " + cliente.getCpf());
-			System.out.println("Vendedor: " + informacoesVendedor.getNome() + " - " + informacoesVendedor.getCpf());
+			System.out.println("Comprador: " + cliente.getInformacoesPessoais().getNome() + " - " + cliente.getInformacoesPessoais().getCpf());
+			System.out.println("Vendedor: " + vendedor.getInformacoesPessoais().getNome() + " - " + vendedor.getInformacoesPessoais().getCpf());
 			System.out.println("Console: " + console.getNome());
 			System.out.println("Preço da compra: " + console.getPreco());
 			System.out.println("Valor pago: " + valorPago);

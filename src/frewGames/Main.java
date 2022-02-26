@@ -382,7 +382,7 @@ public class Main {
 		//Chamada de métodos da classe Loja
 		loja.cartaoLoja();
 		System.out.println();
-		loja.venderConsole(informacoesVendedor, vendedor, xbox, informacoesCliente4, caixa, financeiro, 1700.0f);
+		loja.venderConsole(vendedor, cliente3, xbox, caixa, financeiro, 1700.0f);
 		System.out.println();
 		loja.venderJogo(vendedor, jogo, cliente, caixa, financeiro, 150);
 		System.out.println();
@@ -399,19 +399,19 @@ public class Main {
 		System.out.println();
 		loja.venderJogo(vendedor, jogo4, cliente2, caixa, financeiro, 70);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor, vendedor, playstation, informacoesCliente, caixa, financeiro, 2300);
+		loja.venderConsole(vendedor, cliente4, playstation, caixa, financeiro, 2300);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor2, vendedor2, playstation, informacoesCliente2, caixa, financeiro, 2300);
+		loja.venderConsole(vendedor2, cliente2, playstation, caixa, financeiro, 2300);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor2, vendedor2, playstation, informacoesCliente4, caixa, financeiro, 2300);
+		loja.venderConsole(vendedor2, cliente, playstation, caixa, financeiro, 2300);
 		System.out.println();
 		loja.venderJogo(vendedor, jogo, cliente3, caixa, financeiro, 200);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor2, vendedor2, xbox, informacoesCliente4, caixa, financeiro, 1700);
+		loja.venderConsole(vendedor2, cliente2, xbox, caixa, financeiro, 1700);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor2, vendedor2, nintendo, informacoesCliente4, caixa, financeiro, 1200);
+		loja.venderConsole(vendedor2, cliente2, nintendo, caixa, financeiro, 1200);
 		System.out.println();
-		loja.venderConsole(informacoesVendedor2, vendedor2, playstation, informacoesCliente2, caixa2, financeiro, 2300);
+		loja.venderConsole(vendedor2, cliente4, playstation, caixa2, financeiro, 2300);
 		System.out.println();
 		loja.comprarUnidadesConsoles(xbox, 2, financeiro);
 		System.out.println();
